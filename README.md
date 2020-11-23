@@ -12,6 +12,14 @@ Benchmark was divided into four categories.
 ToString is an independent operation.\
 Sort is an operation that depends on other elements.
 
+### How to Run
+
+Execute run.sh by giving the cpu count.
+
+```
+./run.sh 4
+```
+
 #### 4 CPUs & 1000 data & bound 100
 
 |Benchmark|Mode|Cnt|Score|Error|Units|
