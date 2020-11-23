@@ -16,43 +16,43 @@ public class PrimitiveBenchmark {
 
     @Benchmark
     public void linkedListSequentialStream(LinkedIntegerProvider dataProvider, Blackhole blackhole) {
-        blackhole.consume(dataProvider.intStream.map(SQUARE).count());
+        blackhole.consume(dataProvider.getIntStream().map(SQUARE).count());
     }
 
     @Benchmark
     public void linkedListParallelStream(LinkedIntegerProvider dataProvider, Blackhole blackhole) {
-        blackhole.consume(dataProvider.intStream.parallel().map(SQUARE).count());
+        blackhole.consume(dataProvider.getIntStream().parallel().map(SQUARE).count());
     }
 
     @Benchmark
     public void linkedListSumSequentialStream(LinkedIntegerProvider dataProvider, Blackhole blackhole) {
-        blackhole.consume(dataProvider.intStream.sum());
+        blackhole.consume(dataProvider.getIntStream().sum());
     }
 
     @Benchmark
     public void linkedListSumParallelStream(LinkedIntegerProvider dataProvider, Blackhole blackhole) {
-        blackhole.consume(dataProvider.intStream.parallel().sum());
+        blackhole.consume(dataProvider.getIntStream().parallel().sum());
     }
 
     // Array List starts
     @Benchmark
     public void arrayListSequentialStream(ArrayListIntegerProvider dataProvider, Blackhole blackhole) {
-        blackhole.consume(dataProvider.intStream.map(SQUARE).count());
+        blackhole.consume(dataProvider.getIntStream().map(SQUARE).count());
     }
 
     @Benchmark
     public void arrayListParallelStream(ArrayListIntegerProvider dataProvider, Blackhole blackhole) {
-        blackhole.consume(dataProvider.intStream.parallel().map(SQUARE).count());
+        blackhole.consume(dataProvider.getIntStream().parallel().map(SQUARE).count());
     }
 
     @Benchmark
     public void arrayListSumSequentialStream(ArrayListIntegerProvider dataProvider, Blackhole blackhole) {
-        blackhole.consume(dataProvider.intStream.sum());
+        blackhole.consume(dataProvider.getIntStream().sum());
     }
 
     @Benchmark
     public void arrayListSumParallelStream(ArrayListIntegerProvider dataProvider, Blackhole blackhole) {
-        blackhole.consume(dataProvider.intStream.parallel().sum());
+        blackhole.consume(dataProvider.getIntStream().parallel().sum());
     }
 
 }

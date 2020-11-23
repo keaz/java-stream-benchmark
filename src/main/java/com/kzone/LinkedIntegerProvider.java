@@ -15,16 +15,20 @@ import static com.kzone.App.DATA_COUNT;
 @State(Scope.Benchmark)
 public class LinkedIntegerProvider {
 
-    public IntStream intStream;
+    private List<Integer> dataList;
 
     @Setup
     public void setup() {
         Random random = new Random();
-        List<Integer> dataList = new LinkedList<>();
+        dataList = new LinkedList<>();
         for (int i = 0; i < DATA_COUNT; i++) {
             dataList.add(random.nextInt(BOUND));
         }
-        intStream = dataList.stream().mapToInt(Integer::intValue);
+
+    }
+
+    public IntStream getIntStream(){
+        return dataList.stream().mapToInt(Integer::intValue);
     }
 
 }

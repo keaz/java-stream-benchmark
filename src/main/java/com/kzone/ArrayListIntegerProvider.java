@@ -16,16 +16,19 @@ import static com.kzone.App.DATA_COUNT;
 public class ArrayListIntegerProvider {
 
 
-    public IntStream intStream;
+    private List<Integer> dataList;
 
     @Setup
     public void setup() {
         Random random = new Random();
-        List<Integer> dataList = new ArrayList<>();
+        dataList = new ArrayList<>();
         for (int i = 0; i < DATA_COUNT; i++) {
             dataList.add(random.nextInt(BOUND));
         }
-        intStream = dataList.stream().mapToInt(Integer::intValue);
+    }
+
+    public IntStream getIntStream(){
+        return dataList.stream().mapToInt(Integer::intValue);
     }
 
 }

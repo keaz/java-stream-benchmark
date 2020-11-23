@@ -9,7 +9,7 @@ import java.io.IOException;
  */
 public class App {
 
-    public static final int BOUND = 100000;
+    public static final int BOUND = 100;
     public static final int MULTIPLICATION = 10;
     public static final int DATA_COUNT = BOUND * MULTIPLICATION;
 
