@@ -1,6 +1,6 @@
-##Benchmark Result of Java Stream API
+## Benchmark Result of Java Stream API
 
-Benchmark was setup using the JMH (Java Microbenchmark Harness) and executed multiple times on docker container using 4 cores and different size of data set. 
+Benchmark was setup using the *JMH (Java Microbenchmark Harness)* and executed multiple times on docker container using *4 cores and different size of data sets*. 
 Each execution had 40 iterations two warmups. 
 Benchmark was divided into four categories.
 
@@ -12,7 +12,7 @@ Benchmark was divided into four categories.
 ToString is an independent operation.\
 Sort is an operation that depends on other elements.
 
-####4 CPUs & 1000 data & bound 100
+#### 4 CPUs & 1000 data & bound 100
 
 |Benchmark|Mode|Cnt|Score|Error|Units|
 |:---|----:|---:|---|---:|---:|
@@ -25,7 +25,7 @@ Sort is an operation that depends on other elements.
 |ObjectBenchmark.linkedListSortedParallelStream    |thrpt   |40    |3249.623 |±   216.470|  ops/s|
 |ObjectBenchmark.linkedListSortedSequentialStream  |thrpt   |40    |7157.674 |±   212.031|  ops/s|
 
-####4 CPUs & 10000 data & bound 1000
+#### 4 CPUs & 10000 data & bound 1000
 
 |Benchmark|Mode|Cnt|Score|Error|Units|
 |:---|----:|---:|---|---:|---:|
@@ -38,7 +38,7 @@ Sort is an operation that depends on other elements.
 |ObjectBenchmark.linkedListSortedParallelStream    |thrpt   |40    |808.992 |±  28.201|  ops/s|
 |ObjectBenchmark.linkedListSortedSequentialStream  |thrpt   |40    |486.503 |±   5.628|  ops/s|
 
-####4 CPUs & 100000 data & bound 10000
+#### 4 CPUs & 100000 data & bound 10000
 
 |Benchmark|Mode|Cnt|Score|Error|Units|
 |:---|----:|---:|---|---:|---:|
@@ -52,7 +52,7 @@ Sort is an operation that depends on other elements.
 |ObjectBenchmark.linkedListSortedSequentialStream  |thrpt   |40    |24.645 |±  0.344  |ops/s|
 
 
-####4 CPUs & 1000000 data & bound 100000
+#### 4 CPUs & 1000000 data & bound 100000
 
 |Benchmark|Mode|Cnt|Score|Error|Units|
 |:---|----:|---:|---|---:|---:|
@@ -65,7 +65,7 @@ Sort is an operation that depends on other elements.
 |ObjectBenchmark.linkedListSortedParallelStream    |thrpt   |40   |2.768 |± 0.058  |ops/s|
 |ObjectBenchmark.linkedListSortedSequentialStream  |thrpt   |40   |1.166 |± 0.085  |ops/s|
 
-####1CPUs & 1000000 data & bound 100000
+#### 1CPUs & 1000000 data & bound 100000
 
 |Benchmark|Mode|Cnt|Score|Error|Units|
 |:---|----:|---:|---|---:|---:|
@@ -81,7 +81,7 @@ Sort is an operation that depends on other elements.
 ------------
 When the data set is small sequential operations perform better than parallel. 
 The difference is significant in independent on operations. 
-There is an extra overhead when forking (splitting) and joining the task. 
-This overhead is visible in when we use a small data set.\  
+There is an extra **overhead when forking (splitting) and joining** the task. 
+This overhead is visible in when we use a small data set. \  
 When the data set gets increased, this overhead is less visible compared to the time it takes to do the operations.
 
