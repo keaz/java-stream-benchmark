@@ -73,7 +73,7 @@ Execute run.sh by giving the cpu count.
 |ObjectBenchmark.linkedListSortedParallelStream    |thrpt   |40   |2.768 |± 0.058  |ops/s|
 |ObjectBenchmark.linkedListSortedSequentialStream  |thrpt   |40   |1.166 |± 0.085  |ops/s|
 
-#### 1CPUs & 1000000 data & bound 100000
+#### 1 CPUs & 1000000 data & bound 100000
 
 |Benchmark|Mode|Cnt|Score|Error|Units|
 |:---|----:|---:|---|---:|---:|
