@@ -1,0 +1,6 @@
+FROM adoptopenjdk/openjdk11-openj9:jre-11.0.11_9_openj9-0.26.0-ubuntu
+
+WORKDIR /app
+COPY target/demo.stream-1.0-SNAPSHOT-jar-with-dependencies.jar .
+
+ENTRYPOINT java -jar demo.stream-1.0-SNAPSHOT-jar-with-dependencies.jar

@@ -1,0 +1,6 @@
+FROM ghcr.io/graalvm/graalvm-ce:java8-20.3.0
+
+WORKDIR /app
+COPY target/demo.stream-1.0-SNAPSHOT-jar-with-dependencies.jar .
+
+ENTRYPOINT java -jar demo.stream-1.0-SNAPSHOT-jar-with-dependencies.jar
